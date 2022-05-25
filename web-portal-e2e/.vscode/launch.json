@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "C:/Users/trang.le/AppData/Local/Programs/Python/Python310/Lib/site-packages/behave/__main__.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--no-capture",
+                "--no-capture-stderr",
+                "D:/FiberID/sourcecode/fiberid/apps/web-portal-e2e/tests/features/login"
+            ]
+            // "cwd": "D:/FiberID/sourcecode/fiberid/apps/web-portal-e2e/tests/features/login",
+        }
+    ]
+}

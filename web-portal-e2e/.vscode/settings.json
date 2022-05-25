@@ -1,0 +1,6 @@
+{
+    "cucumberautocomplete.steps": [
+        "tests/features/login/steps/*.py",
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true
+}
