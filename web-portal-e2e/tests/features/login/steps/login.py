@@ -25,12 +25,17 @@ def step_impl(context):
     browser.open_url(context.url)
 
 
-# @given('I am on Google page')
-# def step_impl(context):
-#     browser.start_driver("chrome")
-#     browser.maximize_browser()
-#     browser.open_url("https://google.com")
-#     browser.wait_until(have.title("Google"))
+@given('I am on Google page')
+def step_impl(context):
+    browser.start_driver("chrome")
+    browser.maximize_browser()
+    browser.open_url(context.url)
+
+
+@when('I search {keyword} google')
+def step_impl(context, keyword):
+    _txt_search.wait_until(be.visible)
+    _txt_search.send_keys(keyword)
 
 
 @when("I enter {username} on username textbox")
@@ -49,6 +54,17 @@ def step_impl(context, password):
 def step_impl(context):
     _btn_Login.wait_until(be.visible)
     _btn_Login.click()
+
+
+@when("I search google with keyword as value below")
+def step_impl(context):
+    table_data = context.table
+
+    for data in table_data:
+        keyword = data.get('value')
+
+    _txt_password.wait_until(be.visible)
+    _txt_password.send_keys(keyword)
 
 
 @then("Users are taken to Slide List page")
